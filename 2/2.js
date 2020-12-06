@@ -14,8 +14,8 @@ function part1(data) {
 function part2(data) {
     let valid_count = 0;
     for (let password of data) {
-        let valid1 = password.string[password.nums[0] - 1] == password.letter;
-        let valid2 = password.string[password.nums[1] - 1] == password.letter;
+        let valid1 = password.string[password.nums[0] - 1] === password.letter;
+        let valid2 = password.string[password.nums[1] - 1] === password.letter;
         valid_count += valid1 ^ valid2;
     }
     return valid_count;
